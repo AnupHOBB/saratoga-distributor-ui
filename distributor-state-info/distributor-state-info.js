@@ -19,7 +19,6 @@ function createListItem(info, index)
 {
     let listItem = document.createElement("div")
     listItem.className = "listItem"
-    listItem.setAttribute('onclick','onItemSelect('+index+')');
     
     let listItemHeader = document.createElement("p")
     listItemHeader.innerHTML = info.title
@@ -48,6 +47,7 @@ function createListItem(info, index)
     listItemBody.appendChild(listItemContent)
 
     let listItemImage = document.createElement("img")
+    listItemImage.setAttribute('onclick','onItemSelect('+index+')');
     listItemImage.className = "listItemImage"
     listItemImage.src = "caller.png"
 

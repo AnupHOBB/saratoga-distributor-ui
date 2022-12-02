@@ -34,7 +34,7 @@
     body
     {
         margin-top: 15%;
-        background-image: linear-gradient(to right, blue, rgb(100, 100, 255), rgb(150, 150, 255), rgb(150, 150, 255), rgb(100, 100, 255), blue);
+        background-image: linear-gradient(to right, #192882, #2B69AC, #192882);
     }
 
     #list
@@ -59,7 +59,7 @@
     body
     {
         margin-top: 5%;
-        background-image: linear-gradient(to right, rgb(12, 12, 214), rgb(92, 92, 255), rgb(142, 142, 255), rgb(142, 142, 255), rgb(92, 92, 255), rgb(12, 12, 214));
+        background-image: linear-gradient(to right, #192882, #2B69AC, #192882);
     }
 
     #list
@@ -84,7 +84,7 @@
     body
     {
         margin-top: 1%;
-        background-image: linear-gradient(to right, blue, rgb(100, 100, 255), rgb(150, 150, 255), rgb(150, 150, 255), rgb(100, 100, 255), blue);
+        background-image: linear-gradient(to right, #192882, #2B69AC, #192882);
     }
 
     #list
