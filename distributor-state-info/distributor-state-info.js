@@ -1,17 +1,25 @@
+let infoData
+
 function onLoad()
 {
     let list = document.getElementById("list")
-    let infoData = getStateInfo()
+    infoData = getStateInfo()
     let title = document.getElementById("title")
     title.innerHTML = getTitle()
     for(let i=0; i<infoData.length; i++)
         list.appendChild(createListItem(infoData[i], i))
 }
 
+function onItemSelect(index)
+{
+    callDistributer(index, infoData[index].phone)
+}
+
 function createListItem(info, index)
 {
     let listItem = document.createElement("div")
     listItem.className = "listItem"
+    listItem.setAttribute('onclick','onItemSelect('+index+')');
     
     let listItemHeader = document.createElement("p")
     listItemHeader.innerHTML = info.title

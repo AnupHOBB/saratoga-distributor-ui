@@ -17,7 +17,7 @@ function getStateInfo()
 {
     return [
         new Info("WINE WAREHOUSE DISTRIBUTIONS", "6550 E WASHINGTON BLVD", "COMMERCE 90040-1822", "(800) 331-2829", true, true, false, true),
-        new Info("WHISKEY WAREHOUSE DISTRIBUTIONS", "221B BAKER STREET", "BUSINESS 90040-1822", "(800) 331-2829", false, true, true, false)
+        new Info("WHISKEY WAREHOUSE DISTRIBUTIONS", "221B BAKER STREET", "BUSINESS 90040-1822", "(800) 331-2777", false, true, true, false)
     ]
 }
 
@@ -34,4 +34,9 @@ function getStates()
 function selectState(index, stateCode)
 {
     console.log("selected state at "+index+" with state code :: "+stateCode)
+}
+
+function callDistributer(index, number)
+{
+    console.log("calling distributor at "+index+" with number :: "+number)
 }
