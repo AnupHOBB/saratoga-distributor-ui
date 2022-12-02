@@ -10,12 +10,7 @@ function onListLoad()
 
 function onItemSelect(index)
 {
-    console.log("selected state :: "+states[index])
-}
-
-function getStates()
-{
-    return ["FL", "CA", "NV", "NY", "AZ", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "OR"]
+    selectState(index, states[index])
 }
 
 function createListItem(index, label)
