@@ -32,7 +32,7 @@
 {
     body
     {
-        margin-top: 15%;
+        margin-top: 7%;
         background-image:  linear-gradient(to right, #192882, #2B69AC, #192882);
     }
 
@@ -88,6 +88,15 @@
         margin-top: 0%;
         margin-left: 18%;
     }
+
+    #arrow
+    {
+        position: absolute;
+        top: 90px;
+        left: 2%;
+        width: 7%;
+        height: 3%;
+    }
 }
 
 @media screen and (min-aspect-ratio : 3/5)and (max-aspect-ratio : 1/1)
@@ -110,7 +119,7 @@
     .listItem
     {
         width: 99.5%;
-        height: 30%;
+        height: 33%;
         border-style: solid;
         border-color: gold;
         display: list-item;
@@ -148,6 +157,15 @@
         gap: 12%;
         margin-top: 0%;
         margin-left: 15%;
+    }
+
+    #arrow
+    {
+        position: absolute;
+        top: 4%;
+        left: 3%;
+        width: 8%;
+        height: 5%;
     }
 }
 
@@ -209,6 +227,15 @@
         gap: 12%;
         margin-top: 0%;
         margin-left: 30%;
+    }
+
+    #arrow
+    {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        width: 3%;
+        height: 5%;
     }
 }
 

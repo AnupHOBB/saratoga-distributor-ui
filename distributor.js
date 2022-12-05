@@ -13,6 +13,16 @@ class Info
     }
 }
 
+class State
+{
+    constructor(code, name)
+    {
+        this.code = code
+        this.name = name
+    }
+}
+
+
 function getStateInfo()
 {
     return [
@@ -23,16 +33,19 @@ function getStateInfo()
 
 function getTitle()
 {
-    return "NEVADA"
+    let param = window.location.search.substring(1)
+    return param.split("=")[1]
 }
 
 function getStates()
 {
-    return ["FL", "CA", "NV", "NY", "AZ", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "OR"]
+    return [new State("SD", "SOUTH&nbspDAKOTA"), new State("ND", "NORTH&nbspDAKOTA"), new State("FL", "FLORIDA"), new State("CA", "CALIFORNIA"), new State("NV", "NEVADA"), new State("NY", "NEW&nbspYORK"), new State("AL", "ALABAMA"), new State("AK", "ALASKA"), new State("OR", "OREGON")]
 }
 
 function selectState(index, stateCode)
 {
+    selectedState = states[index].name
+    window.location.replace("http://127.0.0.1:5500/distributor-state-info/distributor-state-info.html?title="+selectedState)
     console.log("selected state at "+index+" with state code :: "+stateCode)
 }
 

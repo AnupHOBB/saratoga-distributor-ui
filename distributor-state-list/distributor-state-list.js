@@ -5,7 +5,7 @@ function onListLoad()
     let list = document.getElementById("list")
     states = getStates()
     for (let i=0; i<states.length; i++)
-        list.appendChild(createListItem(i, states[i]))
+        list.appendChild(createListItem(i, states[i].code))
 }
 
 function onItemSelect(index)
