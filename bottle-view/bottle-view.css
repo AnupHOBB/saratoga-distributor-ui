@@ -3,15 +3,6 @@ body
     background-image: linear-gradient(to right, #192882, #2B69AC, #192882);
 }
 
-img#logo
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    margin-bottom: 0%;
-}
-
 p
 {
     width: 100%;
@@ -41,7 +32,7 @@ h1
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 3vh;
+    font-size: 2.5vh;
     margin-top: 0%;
     margin-bottom: 0%;
 }
@@ -55,12 +46,24 @@ sup
     font-family:Arial, Helvetica, sans-serif;
 }
 
+div#footer
+{
+    display: flex;
+    width: 100%;
+    height: 5%;
+}
+
 @media screen and (max-aspect-ratio : 3/5) 
 {
-    #heading
+    img#logo
     {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 10%;
-        display: list-item;
+        margin-bottom: 0%;
+        width: 35%;
+        height: 250px;   
     }
 
     #underline
@@ -76,11 +79,35 @@ sup
         border-radius: 3ch;
     }
 
-    canvas
+    div#body
     {
         margin-top: 5%;
         width: 100%;
-        height:63%;
+        height:60%;
+    }
+
+    img#btn-back
+    {
+        position: absolute;
+        top: 650px;
+        left: 5%;
+        width: 20%;
+        height: 10%;
+    }
+
+    img#btn-info
+    {
+        position: absolute;
+        top: 650px;
+        left: 75%;
+        width: 20%;
+        height: 10%;
+    }
+
+    canvas
+    {
+        width: 100%;
+        height: 100%;
     }
 
     p#footer-label
@@ -107,10 +134,15 @@ sup
 
 @media screen and (min-aspect-ratio : 3/5) and (max-aspect-ratio : 1/1)
 {
-    #heading
+    img#logo
     {
-        margin-top: 5%;
-        display: list-item;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        margin-bottom: 0%;
+        width: 35%;
+        height: 20%;   
     }
 
     #underline
@@ -119,18 +151,42 @@ sup
         background-image: linear-gradient(to right, gold, rgb(155, 117, 0), rgb(255, 250, 200), rgb(155, 117, 0), gold);
         width: 80%;
         height: 1%;
-        margin-top: 5%;
+        margin-top: 3%;
         margin-bottom: 2%;
         margin-left: auto;
         margin-right: auto;
         border-radius: 3ch;
     }
 
-    canvas
+    div#body
     {
         margin-top: 5%;
         width: 100%;
-        height:60%;
+        height:57%;
+    }
+
+    img#btn-back
+    {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        width: 15%;
+        height: 10%;
+    }
+
+    img#btn-info
+    {
+        position: absolute;
+        top: 40%;
+        left: 80%;
+        width: 15%;
+        height: 10%;
+    }
+
+    canvas
+    {
+        width: 100%;
+        height: 100%;
     }
 
     p#footer-label
@@ -157,9 +213,15 @@ sup
 
 @media screen and (min-aspect-ratio : 1/1) 
 {
-    #heading
+    img#logo
     {
-        display: list-item;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        margin-bottom: 0%;
+        width: 15%;
+        height: 20%;   
     }
 
     #underline
@@ -168,24 +230,48 @@ sup
         background-image: linear-gradient(to right, gold, rgb(153, 117, 0), rgb(255, 250, 200), rgb(155, 117, 0), gold);
         width: 80%;
         height: 1%;
-        margin-top: 1%;
+        margin-top: 1.5%;
         margin-bottom: 1%;
         margin-left: auto;
         margin-right: auto;
         border-radius: 3ch;
     }
 
+    div#body
+    {
+        margin-top: 1%;
+        width: 100%;
+        height:55%;
+    }
+
+    img#btn-back
+    {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        width: 10%;
+        height: 15%;
+    }
+
+    img#btn-info
+    {
+        position: absolute;
+        top: 40%;
+        left: 85%;
+        width: 10%;
+        height: 15%;
+    }
+
     canvas
     {
-        margin-top: 5%;
         width: 100%;
-        height:51%;
+        height: 100%;
     }
 
     p#footer-label
     {
         margin-top: 0.8%;
-        width: 30%;
+        width: 35%;
         font-size: 1.8vh;
         color: gold;
         letter-spacing: 4px;
@@ -202,11 +288,4 @@ sup
         width: 3%;
         margin-right: auto;
     }
-}
-
-div#footer
-{
-    display: flex;
-    width: 100%;
-    height: 5%;
 }
