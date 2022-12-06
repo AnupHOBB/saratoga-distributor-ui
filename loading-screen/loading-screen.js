@@ -1,3 +1,6 @@
+const { Observable, timer } = rxjs
+const { delay } = rxjs.operators
+
 const IMAGE_PREFIX = "loading-screen-icon/LoadingScreen"
 const IMAGE_SUFFIX = ".webp"
 const DELAY_IN_MILLIS = 500
@@ -7,21 +10,33 @@ let loaderText
 
 function onLoad()
 {
-    loaderIcon = document.getElementById("loader-icon")
-    loaderText = document.getElementById("loader-text")
-    changeLoaderIcon(5)
+    loaderIcon = document.getElementById("loader-icon");
+    loaderText = document.getElementById("loader-text");
+    new Observable((subscriber) => onSubscribe(subscriber, 5))
+    .subscribe(
+        {
+            next(i) { changeLoaderIcon(i) },
+            error(err) { console.log(err) },
+            complete() { onLoadingComplete() }
+        }
+    )
+}
+
+function onSubscribe(subscriber, i)
+{
+    if (i <= 100)
+    {
+        subscriber.next(i)
+        setTimeout(() => onSubscribe(subscriber, i+5), DELAY_IN_MILLIS)
+    }
+    else
+        subscriber.complete()
 }
 
 function changeLoaderIcon(percentage)
 {
-    if (percentage <= 100)
-    {
-        loaderIcon.src = IMAGE_PREFIX+percentage+IMAGE_SUFFIX
-        loaderText.innerHTML = "LOADING... "+percentage+"%"
-        setTimeout(() => changeLoaderIcon(percentage + 5), DELAY_IN_MILLIS)
-    }
-    else
-        onLoadingComplete()
+    loaderIcon.src = IMAGE_PREFIX+percentage+IMAGE_SUFFIX
+    loaderText.innerHTML = "LOADING... "+percentage+"%"
 }
 
 function onLoadingComplete()

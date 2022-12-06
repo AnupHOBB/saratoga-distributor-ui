@@ -39,7 +39,7 @@ function getTitle()
 
 function getStates()
 {
-    return [new State("SD", "SOUTH&nbspDAKOTA"), new State("ND", "NORTH&nbspDAKOTA"), new State("FL", "FLORIDA"), new State("CA", "CALIFORNIA"), new State("NV", "NEVADA"), new State("NY", "NEW&nbspYORK"), new State("AL", "ALABAMA"), new State("AK", "ALASKA"), new State("OR", "OREGON")]
+    return [new State("FL", "FLORIDA"), new State("CA", "CALIFORNIA"), new State("SD", "SOUTH&nbspDAKOTA"), new State("ND", "NORTH&nbspDAKOTA"), new State("NV", "NEVADA"), new State("NY", "NEW&nbspYORK"), new State("AL", "ALABAMA"), new State("AK", "ALASKA"), new State("OR", "OREGON")]
 }
 
 function selectState(index, stateCode)

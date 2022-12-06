@@ -1,11 +1,24 @@
+const {Observable, from} = rxjs
+
 let states;
 
 function onListLoad()
 {
     let list = document.getElementById("list")
-    states = getStates()
-    for (let i=0; i<states.length; i++)
-        list.appendChild(createListItem(i, states[i].code))
+    new Observable((subscriber) =>
+        {
+            states = getStates()
+            for (let i=0; i<states.length; i++)
+                subscriber.next({ index: i, label: states[i].code })
+            subscriber.complete()
+        }
+    ).subscribe(
+        {
+            next(item) { list.appendChild(createListItem(item)) },
+            error(err) { console.log(err) },
+            complete() { console.log("populated list using RxJS") }
+        }
+    )
 }
 
 function onItemSelect(index)
@@ -13,18 +26,18 @@ function onItemSelect(index)
     selectState(index, states[index])
 }
 
-function createListItem(index, label)
+function createListItem(item)
 {
-    /*let pLabel = document.createElement("p")
+    let pLabel = document.createElement("p")
     pLabel.className = "listItemLabel"
-    pLabel.innerHTML = label;
-    let pArrow = document.createElement("p")
-    pArrow.className = "listItemArrow"
-    pArrow.innerHTML = ">"
+    pLabel.innerHTML = item.label;
+    let img = document.createElement("img")
+    img.className = "listItemArrow"
+    img.src = "arrow-white.png"
     let div = document.createElement("div")
     div.className = "listItem"
-    div.setAttribute('onclick','onItemSelect('+index+')');
+    div.setAttribute('onclick','onItemSelect('+item.index+')');
     div.appendChild(pLabel)
-    div.appendChild(pArrow)
-    return div */
+    div.appendChild(img)
+    return div
 }

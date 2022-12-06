@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="https://use.typekit.net/ctt8sww.css"/>
         <link rel="stylesheet" href="distributor-state-list.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.2/rxjs.umd.js"></script>
         <script src="../distributor.js"></script>
         <script src="distributor-state-list.js"></script>
     </head>
@@ -9,16 +10,7 @@
         <h1 id="title">STATES<h1>
         <div id="underline"></div>
         <p id="subTitle">Please select a state to find a distributor</p>
-        <div id="list">
-            <div class="listItem" onclick="onItemSelect(0)">
-                <p class="listItemLabel">SD</p>
-                <img class="listItemArrow" src="arrow-white.png"/>
-            </div>
-            <div class="listItem" onclick="onItemSelect(1)">
-                <p class="listItemLabel">FL</p>
-                <img class="listItemArrow" src="arrow-white.png"/>
-            </div>
-        </div>
+        <div id="list"></div>
         <img id="arrow" src="../arrow.png"/>
     </body>
 </html>
