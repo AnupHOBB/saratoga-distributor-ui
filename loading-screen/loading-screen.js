@@ -9,13 +9,25 @@ function onLoad()
 {
     loaderIcon = document.getElementById("loader-icon")
     loaderText = document.getElementById("loader-text")
-    changeLoaderIcon(0)
+    changeLoaderIcon(5)
 }
 
 function changeLoaderIcon(percentage)
 {
-    percentage = (percentage < 100) ? percentage+5 : 5
-    loaderIcon.src = IMAGE_PREFIX+percentage+IMAGE_SUFFIX
-    loaderText.innerHTML = "LOADING... "+percentage+"%"
-    setTimeout(() => changeLoaderIcon(percentage), DELAY_IN_MILLIS)
+    if (percentage <= 100)
+    {
+        loaderIcon.src = IMAGE_PREFIX+percentage+IMAGE_SUFFIX
+        loaderText.innerHTML = "LOADING... "+percentage+"%"
+        setTimeout(() => changeLoaderIcon(percentage + 5), DELAY_IN_MILLIS)
+    }
+    else
+        onLoadingComplete()
+}
+
+function onLoadingComplete()
+{
+    let head = document.querySelector("head")
+    let body = document.querySelector("body")
+    head.parentElement.removeChild(head)
+    body.parentElement.removeChild(body)
 }
