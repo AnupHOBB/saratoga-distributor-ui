@@ -15,7 +15,7 @@ function onItemSelect(index)
 
 function createListItem(index, label)
 {
-    let pLabel = document.createElement("p")
+    /*let pLabel = document.createElement("p")
     pLabel.className = "listItemLabel"
     pLabel.innerHTML = label;
     let pArrow = document.createElement("p")
@@ -26,5 +26,5 @@ function createListItem(index, label)
     div.setAttribute('onclick','onItemSelect('+index+')');
     div.appendChild(pLabel)
     div.appendChild(pArrow)
-    return div 
+    return div */
 }
